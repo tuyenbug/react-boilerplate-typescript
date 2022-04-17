@@ -11,7 +11,7 @@ module.exports = require('./webpack.base.babel')({
   mode: 'production',
 
   // In production, we skip all hot-reloading stuff
-  entry: path.join(process.cwd(), 'app/app.tsx'),
+  entry: path.join(process.cwd(), 'webapp/app/app.tsx'),
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
   output: {
@@ -74,7 +74,7 @@ module.exports = require('./webpack.base.babel')({
   plugins: [
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
-      template: 'app/index.html',
+      template: 'webapp/app/index.html',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -134,11 +134,11 @@ module.exports = require('./webpack.base.babel')({
       ios: true,
       icons: [
         {
-          src: path.resolve('app/images/icon-512x512.png'),
+          src: path.resolve('webapp/app/images/icon-512x512.png'),
           sizes: [72, 96, 128, 144, 192, 384, 512],
         },
         {
-          src: path.resolve('app/images/icon-512x512.png'),
+          src: path.resolve('webapp/app/images/icon-512x512.png'),
           sizes: [120, 152, 167, 180],
           ios: true,
         },

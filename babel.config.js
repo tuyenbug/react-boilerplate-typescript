@@ -16,7 +16,7 @@ module.exports = {
   ],
   env: {
     production: {
-      only: ['app'],
+      only: ['webapp/app'],
       plugins: [
         'lodash',
         'transform-react-remove-prop-types',
